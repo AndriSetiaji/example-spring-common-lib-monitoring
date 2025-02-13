@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: co.bjj.core
+  cloud:
+    vault:
+      uri: http://localhost:18200
+      authentication: APPROLE
+      app-role:
+        role-id: c00e39a2-30bd-48f8-6c19-4d45aa5a5954
+        secret-id: 830deeb0-e7af-81b8-5baf-8f3c7f5bc332
+      generic:
+        backend: secret
+        default-context: local-ans
